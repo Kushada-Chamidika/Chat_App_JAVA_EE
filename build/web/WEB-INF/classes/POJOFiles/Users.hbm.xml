@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 18, 2021 11:09:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOFiles.Users" table="users" catalog="chatapplicationassignment" optimistic-lock="version">
+        <id name="idusers" type="java.lang.Integer">
+            <column name="idusers" />
+            <generator class="identity" />
+        </id>
+        <property name="fullname" type="string">
+            <column name="fullname" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column name="dateCreated" length="19" />
+        </property>
+        <property name="isActive" type="java.lang.Integer">
+            <column name="isActive" />
+        </property>
+    </class>
+</hibernate-mapping>

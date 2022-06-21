@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 18, 2021 11:09:39 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOFiles.Individualchat" table="individualchat" catalog="chatapplicationassignment" optimistic-lock="version">
+        <id name="idindividualChat" type="java.lang.Integer">
+            <column name="idindividualChat" />
+            <generator class="identity" />
+        </id>
+        <property name="senderUname" type="string">
+            <column name="senderUname" not-null="true" />
+        </property>
+        <property name="receiverUname" type="string">
+            <column name="receiverUname" not-null="true" />
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="500" not-null="true" />
+        </property>
+        <property name="createdTime" type="timestamp">
+            <column name="createdTime" length="19" not-null="true" />
+        </property>
+        <property name="isActive" type="int">
+            <column name="isActive" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
